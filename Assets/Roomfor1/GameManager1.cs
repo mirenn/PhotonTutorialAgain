@@ -8,7 +8,7 @@ namespace Com.MyCompany.MyGame
 {
     public class GameManager1 : MonoBehaviour//=>1
     {
-
+        static public GameManager1 Instance;
         #region Photon Messages
 
         /// <summary>
@@ -21,6 +21,10 @@ namespace Com.MyCompany.MyGame
 
         #endregion
 
+        private void Start()
+        {
+            Instance = this;
+        }
         #region Public Methods
 
         public void LeaveRoom()
